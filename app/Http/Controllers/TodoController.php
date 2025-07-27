@@ -13,8 +13,7 @@ class TodoController extends Controller
     }
     function allTodos(){
         //  Logic for displaying all todos
-        $todos = Todo::latest()->get();
-        // return view('AllTodos', compact('todos'));
+        $todos = Todo::orderBy('status','ASC')->latest()->get();
         return view('AllTodos', compact('todos'));
     }
     function storeTodo(Request $request){

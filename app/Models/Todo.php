@@ -10,6 +10,6 @@ class Todo extends Model
         'title',
         'detail',
         'publish_date',
-        'satus',
+        'status',
     ];
 }
